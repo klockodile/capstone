@@ -1,40 +1,14 @@
-const knex = require("../db/connection");
-const reservationsService = require("../reservations/reservations.service");
+const knex = require('../db/connection')
 
-async function list() {
-  return await knex("tables").orderBy("table_name", "asc");
-}
+const create = (newTable) => knex('tables').insert(newTable).returning('*')
 
-async function create(table) {
-  return await knex("tables")
-    .insert(table, "*")
-    .then((response) => response[0]);
-}
+const read = (tableId) =>
+  knex('tables').select('*').where({ table_id: tableId }).first()
 
-async function read(table_id) {
-  return await knex("tables").where({ table_id }).first();
-}
-
-async function updateReservationId(table_id, reservation_id) {
-  return await knex("tables")
-    .where({ table_id })
-    .update("reservation_id", reservation_id)
-    .then(() => reservationsService.updateStatus(reservation_id, "seated"));
-}
-
-async function destroyReservationId(table) {
-  return await knex("tables")
-    .where({ table_id: table.table_id })
-    .update("reservation_id", null)
-    .then(() =>
-      reservationsService.updateStatus(table.reservation_id, "finished")
-    );
-}
+const list = () => knex('tables').select('*').orderBy('table_name')
 
 module.exports = {
-  list,
   create,
   read,
-  updateReservationId,
-  destroyReservationId,
-};
+  list,
+}
