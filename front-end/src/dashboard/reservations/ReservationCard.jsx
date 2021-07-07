@@ -44,7 +44,7 @@ export default function ReservationCard({ reservation }) {
 
   return (
     <div className="card mt-1">
-      <div className="card-body">
+      <div className="card-body" key="reservation">
         <h5 className="card-title">
           Name: {`${reservation.first_name} ${reservation.last_name}`}
         </h5>
