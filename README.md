@@ -1,8 +1,3 @@
-A link to your live application
-Screenshots of your application. This makes your application description much easier to understand.
-A summary section that concisely explains what your application does. Try to frame this from the standpoint of what the user does, or how the application benefits the user.
-Installation instructions
-
 # Capstone: Restaurant Reservation System
 
 This is an application for restaurant employees to keep track of reservations made. It was made using HTML5, CSS3, JavaScript ES6, PostgreSQL, Express.js, React.js, Node.js, and Knex.js.
@@ -48,4 +43,12 @@ Users have the capability to add a new table with a name and the capacity of tha
 ![Alt text](/screenshots/Screenshot%202021-07-08%20160616.png "new Table")
 
 
-#### Installation
+## Installation
+
+1. Clone this repository or download the zip file. 
+1. Run `cp ./back-end/.env.sample ./back-end/.env`.
+1. Update the `./back-end/.env` file with the connection URL's to your database instances.
+1. Run `cp ./front-end/.env.sample ./front-end/.env`.
+1. You should not need to make changes to the `./front-end/.env` file unless you want to connect to a backend at a location other than `http://localhost:5000`.
+1. Run `npm install` to install project dependencies.
+1. Run `npm run start:dev` to start your server in development mode.
