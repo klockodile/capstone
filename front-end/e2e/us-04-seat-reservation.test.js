@@ -169,31 +169,31 @@ describe("US-04 - Seat reservation - E2E", () => {
       );
     });
 
-    test("seating reservation at table #1 makes the table occupied", async () => {
+    test.only("seating reservation at table #1 makes the table occupied", async () => {
       await page.waitForSelector('option:not([value=""])');
-
+      console.log("line 174")
       await page.screenshot({
         path: ".screenshots/us-04-seat-reservation-start.png",
         fullPage: true,
       });
-
+      console.log("line 179")
       await selectOptionByText(page, "table_id", "#1 - 6");
-
+      console.log("line 181")
       await page.screenshot({
         path: ".screenshots/us-04-seat-reservation-submit-before.png",
         fullPage: true,
       });
-
+      console.log("line 186")
       await Promise.all([
         page.click("[type=submit]"),
         page.waitForNavigation({ waitUntil: "networkidle0" }),
       ]);
-
+      console.log("line 191")
       await page.screenshot({
         path: ".screenshots/us-04-seat-reservation-submit-after.png",
         fullPage: true,
       });
-
+      console.log("line 196")
       expect(page.url()).toContain("/dashboard");
       expect(page).toMatch(/occupied/i);
     });
