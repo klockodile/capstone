@@ -21,6 +21,13 @@ export default function SeatParty() {
   } = useRouteMatch();
 
   useEffect(loadReservation, []);
+  useEffect(() => {
+    const filtered = filterTables()
+    setFilteredTables(filtered)
+    setTable(filtered[0])
+  }, [Tables.list])
+
+  
   function loadReservation() {
     readReservation(reservation_id, abortController.signal)
       .then(setRes)
