@@ -13,21 +13,19 @@ Installation instructions
 
 ## API Documentation
 
-| Endpoint | Method | Description                                                     |
+| Endpoint | Method | Description |
 | ---------------- | -----------------------------------------------| ----------------- |
-| /reservations     | The backend project, which runs on `localhost:5000` by default.  |
-| /reservations    | The frontend project, which runs on `localhost:3000` by default. |
-| /
+| /reservations | GET | Retrieves all existing reservations. |
+| /reservations | POST | Creates a new reservation. |
+| /reservations/:reservation_id | GET | Gets the reservation with specific 'reservation_id'. |
+| /reservations/:reservation_id | PUT | Updates the reservation. |
+| /reservations/:reservation_id/status | PUT | Updates the reservation status. |
+| /tables | GET | Retrieves all existing tables. |
+| /tables | POST | Creates a new table. |
+| /tables/:tableId/seat | PUT | Assigns a reservation to a table. |
+| /tables/:tableId/seat | DELETE | Clears a table for future use. |
 
-/reservations	GET	Retrieves all existing reservation.
-/reservations	POST	Creates a new reservation.
-/reservations/:reservation_id	GET	Gets the reservation with specific 'reservation_id'.
-/reservations/:reservation_id	PUT	Updates the reservation.
-/reservations/:reservation_id/status	PUT	Updates the reservation status.
-/tables	GET	Retrieves all existing tables.
-/tables	POST	Creates a new table.
-/tables/:tableId/seat	PUT	Assigns a reservation to a table.
-/tables/:tableId/seat	DELETE	Clears a table for future use.
+
 ### Backend Existing files
 
 The `./back-end` folder contains all the code for the backend project.
