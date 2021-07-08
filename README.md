@@ -1,30 +1,33 @@
+The name of your application at the top of the file
+A link to your live application
+Documentation of your API
+Screenshots of your application. This makes your application description much easier to understand.
+A summary section that concisely explains what your application does. Try to frame this from the standpoint of what the user does, or how the application benefits the user.
+A section on the technology used
+Installation instructions
+
 # Capstone: Restaurant Reservation System
 
-> You have been hired as a full stack developer at _Periodic Tables_, a startup that is creating a reservation system for fine dining restaurants.
-> The software is used only by restaurant personnel when a customer calls to request a reservation.
-> At this point, the customers will not access the system online.
+> This is an application for restaurant employees to keep track of reservations made.
 
-There are no user stories for deployment: it is expected that you will deploy the application to production after you finish a user story.
 
-There are no user stories for logging: it is expected that you will add logging to the application with enough detail to help you diagnose issues in production.
+## API Documentation
 
-## Existing files
+| Endpoint | Method | Description                                                     |
+| ---------------- | -----------------------------------------------| ----------------- |
+| /reservations     | The backend project, which runs on `localhost:5000` by default.  |
+| /reservations    | The frontend project, which runs on `localhost:3000` by default. |
+| /
 
-This repository is set up as a *monorepo*, meaning that the frontend and backend projects are in one repository. This allows you to open both projects in the same editor.
-
-As you work through the user stories listed later in this document, you will be writing code that allows your frontend and backend applications to talk to each other. You will also write code to allow your controllers and services to connect to, and query, your PostgreSQL database via [Knex](http://knexjs.org/).
-
-The table below describes the folders in this starter repository:
-
-| Folder/file path | Description                                                      |
-| ---------------- | ---------------------------------------------------------------- |
-| `./back-end`     | The backend project, which runs on `localhost:5000` by default.  |
-| `./front-end`    | The frontend project, which runs on `localhost:3000` by default. |
-
-This starter code closely follows the best practices and patterns established in the Robust Server Structure module.
-
-**Note**: Please do not submit a pull request to this repository with your solution.
-
+/reservations	GET	Retrieves all existing reservation.
+/reservations	POST	Creates a new reservation.
+/reservations/:reservation_id	GET	Gets the reservation with specific 'reservation_id'.
+/reservations/:reservation_id	PUT	Updates the reservation.
+/reservations/:reservation_id/status	PUT	Updates the reservation status.
+/tables	GET	Retrieves all existing tables.
+/tables	POST	Creates a new table.
+/tables/:tableId/seat	PUT	Assigns a reservation to a table.
+/tables/:tableId/seat	DELETE	Clears a table for future use.
 ### Backend Existing files
 
 The `./back-end` folder contains all the code for the backend project.
