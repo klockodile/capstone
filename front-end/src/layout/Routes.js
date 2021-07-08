@@ -78,10 +78,7 @@ export default function Routes() {
           path="/reservations/:reservation_id/edit"
           component={AddEditReservation}
         />
-        <Route
-          exact={true} path="/reservations/:reservation_id/seat"
-          component={SeatParty}
-        />
+        <Route exact={true} path="/reservations/:reservation_id/seat" component={SeatParty} />
         <Route exact path="/reservations/new" component={AddEditReservation} />
         <Route exact path="/search" component={SearchMobileNumber} />
         <Route exact path="/dashboard" component={Dashboard} />
