@@ -30,6 +30,6 @@ The application has four main pages: the Dashboard, a search by phone number fun
 #### The Dashboard 
 Also considered the home page, the Dashboard shows the reservations (defaulted for the current date) and the tables. If there are no reservations, a button appears to add one. This is also the page where you can assign reservations to tables.
 
-![Alt text](/path/to/img.jpg "Dashboard")
+![Alt text](/screenshots/us-06-dashboard-displays-status.png "Dashboard")
 
 #### Installation
