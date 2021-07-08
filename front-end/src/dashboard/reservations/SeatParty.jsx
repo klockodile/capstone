@@ -12,7 +12,7 @@ export default function SeatParty() {
     Tables,
   } = useContext(Context);
   const [res, setRes] = useState({});
-  const [filteredTables] = useState(filterTables());
+  const [filteredTables, setFilteredTables] = useState(filterTables());
   const [table, setTable] = useState(filteredTables[0]);
   const [error, setError] = useState(null);
   const abortController = new AbortController();
