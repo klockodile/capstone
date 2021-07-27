@@ -4,7 +4,7 @@ This is an application for restaurant employees to keep track of reservations ma
 ## API Documentation
 
 | Endpoint | Method | Description |
-| ---------------- | -----------------------------------------------| ----------------- |
+| ---------------- | ----------------------------------------------| ----------------- |
 | /reservations | GET | Retrieves all existing reservations. |
 | /reservations | POST | Creates a new reservation. |
 | /reservations/:reservation_id | GET | Gets the reservation with specific 'reservation_id'. |
