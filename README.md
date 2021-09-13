@@ -1,6 +1,7 @@
 # Capstone: Restaurant Reservation System
 
-This is an application for restaurant employees to keep track of reservations made. It was made using HTML5, CSS3, JavaScript ES6, PostgreSQL, Express.js, React.js, Node.js, and Knex.js.
+This is an application for restaurant employees to keep track of reservations made. It was made using HTML5, CSS3, JavaScript ES6, PostgreSQL, Express.js, React.js, Node.js, and Knex.js. 
+
 ## API Documentation
 
 | Endpoint | Method | Description |
